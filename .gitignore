@@ -19,3 +19,5 @@ test
 build/*
 docs/latex
 docs/html
+
+*~
