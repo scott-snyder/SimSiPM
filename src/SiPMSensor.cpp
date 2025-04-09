@@ -175,6 +175,7 @@ pair<uint32_t> SiPMSensor::hitCell() const {
   case SiPMProperties::HitDistribution::kGaussian:
     return hitGaussian();
   }
+  std::abort();
 }
 
 void SiPMSensor::addDcrEvents() {
