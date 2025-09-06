@@ -36,7 +36,7 @@ public:
 
   constexpr SiPMHit(double time, float amp, uint32_t row, uint32_t col, HitType type,
                     const SiPMHit* parentPtr = nullptr) noexcept
-    : m_Time(time), m_Amplitude(amp), m_Row(row), m_Col(col), m_HitType(type), m_ParentPtr(parentPtr) {}
+    : m_Time(time), m_ParentPtr(parentPtr), m_Amplitude(amp), m_Row(row), m_Col(col), m_HitType(type) {}
 
 
   /// @brief Comparison operator for hits
