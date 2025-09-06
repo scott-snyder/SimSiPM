@@ -86,3 +86,9 @@ if (SIPM_BUILD_PYTHON)
 	LIBRARY DESTINATION lib/python${Python_VERSION_MAJOR}.${Python_VERSION_MINOR}/site-packages
 	)
 endif (SIPM_BUILD_PYTHON)
+
+# By default, the generated Target file will set up the include paths for
+# our libraries using INTERFACE_INCLUDE_DIRECTORIES, meaning that they
+# will be included using -isystem rather than -I.  However, this can hide
+# warnings.  Adjust the behavior to use -I instead.
+set_target_properties( sipm PROPERTIES EXPORT_NO_SYSTEM ON )
